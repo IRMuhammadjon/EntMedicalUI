@@ -1,0 +1,65 @@
+<!-- Components/ServiceSelectionComponent.razor -->
+
+<div class="service-selection-container">
+    <!-- Doctor Selection -->
+    <div class="doctor-selection">
+        <label>Shifokorni tanlang</label>
+        <select class="doctor-dropdown">
+            <option value="Doctor1">Doctor 1</option>
+            <option value="Doctor2">Doctor 2</option>
+            <option value="Doctor3">Doctor 3</option>
+        </select>
+        <button class="refresh-button">&#x21bb;</button>
+    </div>
+
+    <!-- Services List -->
+    <div class="services-list">
+        @foreach (var service in Services)
+        {
+            <div class="service-item">
+                <input type="checkbox" @bind="service.IsSelected" />
+                <label>@service.Name</label>
+                <span class="service-price">@service.Price UZS</span>
+            </div>
+        }
+    </div>
+
+    <!-- Summary Section -->
+    <div class="summary-section">
+        <div class="summary-header">
+            <span class="summary-title">Xizmat</span>
+            <span class="summary-title">Summa</span>
+        </div>
+        @foreach (var service in SelectedServices)
+        {
+            <div class="summary-item">
+                <span>@service.Name</span>
+                <span>@service.Price UZS</span>
+            </div>
+        }
+    </div>
+</div>
+
+@code {
+    // Service model
+    public class ServiceItem
+    {
+        public string Name { get; set; }
+        public int Price { get; set; }
+        public bool IsSelected { get; set; }
+    }
+
+    // List of available services
+    private List<ServiceItem> Services = new List<ServiceItem>
+    {
+        new ServiceItem { Name = "Konsultatsiya", Price = 60000 },
+        new ServiceItem { Name = "Ikkilamchi ko'rik", Price = 0 },
+        new ServiceItem { Name = "BYB sanatsiyasi", Price = 50000 },
+        new ServiceItem { Name = "Quloq yuvish", Price = 50000 },
+        new ServiceItem { Name = "Limfotrop", Price = 70000 },
+        new ServiceItem { Name = "XXX", Price = 0 }
+    };
+
+    // Filtered list of selected services
+    private IEnumerable<ServiceItem> SelectedServices => Services.Where(s => s.IsSelected);
+}

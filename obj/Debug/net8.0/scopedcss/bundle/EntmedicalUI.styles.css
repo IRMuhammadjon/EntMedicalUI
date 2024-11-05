@@ -42,6 +42,164 @@
 .form-input[b-qxqcl6eavx]::placeholder {
     color: #bbb;
 }
+/* /Components/QabulComponent.razor.rz.scp.css */
+/* QabulComponent.razor.css */
+
+.nav-tabs[b-0v361857ps] {
+    display: flex;
+    justify-content: center; /* Center the navigation */
+    border-bottom: 1px solid #dee2e6;
+}
+
+.service-nav[b-0v361857ps] {
+    display: flex;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.service-link[b-0v361857ps] {
+    padding: 10px 15px;
+    color: #7b83eb; /* Purple color for text */
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-color: #e9e7fd; /* Light purple background */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.service-link:hover[b-0v361857ps] {
+    background-color: #d6d1f5; /* Darker purple on hover */
+    color: #4e4eb5; /* Darker purple text on hover */
+}
+
+.service-link.active[b-0v361857ps] {
+    color: #ffffff; /* White text */
+    background-color: #7b83eb; /* Purple background for active */
+    border-color: #7b83eb; /* Border matches the background */
+}
+
+.service-link.disabled[b-0v361857ps] {
+    color: #b3b3b3; /* Light gray for disabled text */
+    background-color: #f2f2f2; /* Very light gray background */
+    pointer-events: none;
+}
+/* /Components/ServiceList.razor.rz.scp.css */
+/* ServiceList.razor.css */
+
+.nav-tabs[b-s92n1xj50a] {
+    display: flex;
+    justify-content: center; /* Center the navigation */
+    border-bottom: 1px solid #dee2e6;
+}
+
+.service-nav[b-s92n1xj50a] {
+    display: flex;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.service-link[b-s92n1xj50a] {
+    padding: 10px 15px;
+    color: #7b83eb; /* Purple color for text */
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-color: #e9e7fd; /* Light purple background */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.service-link:hover[b-s92n1xj50a] {
+    background-color: #d6d1f5; /* Darker purple on hover */
+    color: #4e4eb5; /* Darker purple text on hover */
+}
+
+.service-link.active[b-s92n1xj50a] {
+    color: #ffffff; /* White text */
+    background-color: #7b83eb; /* Purple background for active */
+    border-color: #7b83eb; /* Border matches the background */
+}
+
+.service-link.disabled[b-s92n1xj50a] {
+    color: #b3b3b3; /* Light gray for disabled text */
+    background-color: #f2f2f2; /* Very light gray background */
+    pointer-events: none;
+}
+/* /Components/ServiceSelectionComponent.razor.rz.scp.css */
+/* ServiceSelectionComponent.razor.css */
+
+.service-selection-container[b-x5zn6i8xen] {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.doctor-selection[b-x5zn6i8xen] {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.doctor-dropdown[b-x5zn6i8xen] {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #00c2ff;
+    border-radius: 5px;
+}
+
+.refresh-button[b-x5zn6i8xen] {
+    background-color: #e0f7ff;
+    border: none;
+    color: #00c2ff;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.services-list[b-x5zn6i8xen] {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.service-item[b-x5zn6i8xen] {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    border: 1px solid #00c2ff;
+    border-radius: 5px;
+}
+
+.service-price[b-x5zn6i8xen] {
+    margin-left: auto;
+    color: #00c2ff;
+}
+
+.summary-section[b-x5zn6i8xen] {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.summary-header[b-x5zn6i8xen] {
+    display: flex;
+    justify-content: space-between;
+    background-color: #d6d1f5;
+    color: white;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.summary-item[b-x5zn6i8xen] {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
 /* /Layout/MainLayout.razor.rz.scp.css */
 /* MainLayout.razor.css */
 

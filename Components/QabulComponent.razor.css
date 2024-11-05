@@ -1,0 +1,42 @@
+/* QabulComponent.razor.css */
+
+.nav-tabs {
+    display: flex;
+    justify-content: center; /* Center the navigation */
+    border-bottom: 1px solid #dee2e6;
+}
+
+.service-nav {
+    display: flex;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.service-link {
+    padding: 10px 15px;
+    color: #7b83eb; /* Purple color for text */
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-color: #e9e7fd; /* Light purple background */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.service-link:hover {
+    background-color: #d6d1f5; /* Darker purple on hover */
+    color: #4e4eb5; /* Darker purple text on hover */
+}
+
+.service-link.active {
+    color: #ffffff; /* White text */
+    background-color: #7b83eb; /* Purple background for active */
+    border-color: #7b83eb; /* Border matches the background */
+}
+
+.service-link.disabled {
+    color: #b3b3b3; /* Light gray for disabled text */
+    background-color: #f2f2f2; /* Very light gray background */
+    pointer-events: none;
+}

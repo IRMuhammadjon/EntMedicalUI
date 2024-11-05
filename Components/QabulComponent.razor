@@ -1,0 +1,29 @@
+<!-- QabulComponent e -->
+<div class="nav nav-tabs">
+    <nav class="service-nav">
+        <a href="#" class="service-link active" @onclick="ShowServiceSelectionComponent" >LOR</a>
+        <a href="#" class="service-link" >Kardiolog</a>
+        <a href="#" class="service-link">Nevrolog</a>
+        <a href="#" class="service-link" >Ginekolog</a>
+        <a href="#" class="service-link" >Urolog</a>
+        <a href="#" class="service-link disabled" aria-disabled="true">Travmatolog</a>
+    </nav>
+</div>
+
+<!-- Conditionally render QabulComponent when isQabulSelected is true -->
+@if (isServiceSelectionComponentSelected)
+{
+    <ServiceSelectionComponent  />
+}
+
+@code {
+    // Variable to track if QabulComponent should be shown
+    private bool isServiceSelectionComponentSelected = false;
+
+    // Method to show the Qabul component
+    private void ShowServiceSelectionComponent()
+    {
+        isServiceSelectionComponentSelected = true;
+    }
+
+}

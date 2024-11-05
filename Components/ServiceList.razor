@@ -1,15 +1,38 @@
 <!-- Components/ServiceList.razor -->
-<div class="service-list">
+<div class="nav nav-tabs">
+    <nav class="service-nav">
+        <a href="#" class="service-link active" @onclick="ShowQabulComponent">Qabul</a>
+        <a href="#" class="service-link" @onclick="HideQabulComponent">Diagnostika</a>
+        <a href="#" class="service-link" @onclick="HideQabulComponent">Laboratoriya</a>
+        <a href="#" class="service-link" @onclick="HideQabulComponent">XXX</a>
+        <a href="#" class="service-link" @onclick="HideQabulComponent">XXX</a>
+        <a href="#" class="service-link disabled" aria-disabled="true">Disabled</a>
+    </nav>
 </div>
-    <nav>
-    <a href="/">Qabul</a> |
-    <a href="/">Diagnostika</a>|
-     <a href="/">Laboratoriya</a> |
-    <a href="/about">XXX</a>|
-     <a href="/">XXX</a> 
-     </nav>
+
+<!-- Conditionally render QabulComponent when isQabulSelected is true -->
+@if (isQabulSelected)
+{
+    <QabulComponent />
+}
 
 @code {
+    // Variable to track if QabulComponent should be shown
+    private bool isQabulSelected = false;
+
+    // Method to show the Qabul component
+    private void ShowQabulComponent()
+    {
+        isQabulSelected = true;
+    }
+
+    // Method to hide the Qabul component
+    private void HideQabulComponent()
+    {
+        isQabulSelected = false;
+    }
+
+
     public class Service
     {
         public string Name { get; set; }

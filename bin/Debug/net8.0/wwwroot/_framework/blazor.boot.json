@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "EntmedicalUI",
   "resources": {
-    "hash": "sha256-XMizbRGui48Ar7fsmL0MIF62HgElPpDz/IQsS90m0zQ=",
+    "hash": "sha256-0cspkudY/WV5UGfGQd+6xYtNOndCbQ9DIbsRylDsikI=",
     "jsModuleNative": {
       "dotnet.native.8.0.8.fqnagzagce.js": "sha256-juC5sA7gHTLXFEhAKgdM2/RavswpwCtDfjYGsAz2FXg="
     },
@@ -208,10 +208,10 @@
       "mscorlib.wasm": "sha256-Gz8PyW2/fwihe5ul81OwmRUrU71r+KtbyRw6xlOGD+Q=",
       "netstandard.wasm": "sha256-jMTqIQzoDS810lyhZpMO5eEC36EzntXqSVn+2qwkOMQ=",
       "System.Private.CoreLib.wasm": "sha256-NFj5WE5VLP2LptZIRJCUIc1AMk06FmxpsSILfPISwAw=",
-      "EntmedicalUI.wasm": "sha256-GFtwQJOYtk4yU6ZPSkt4aUyRU58QSPLm+jrXdOz3Bq4="
+      "EntmedicalUI.wasm": "sha256-Xygmgi9fsek7ASpyY0B9XBVWTc/+h07bDbUwk87fA30="
     },
     "pdb": {
-      "EntmedicalUI.pdb": "sha256-i371hiVmoGRuAed1vAqIX3UFeV15GrevlcAQdKf/l/Y="
+      "EntmedicalUI.pdb": "sha256-cF6lJKyn6EKVoNKB36IHR3gA8JulFTEy4NFs4Wvsvlw="
     }
   },
   "cacheBootResources": true,
