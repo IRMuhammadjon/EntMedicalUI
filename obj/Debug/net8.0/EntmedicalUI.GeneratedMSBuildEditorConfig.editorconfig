@@ -26,10 +26,6 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Personal/EntmedicalUI/Components/DiagnosticForm.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xEaWFnbm9zdGljRm9ybS5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Personal/EntmedicalUI/Pages/HomePage.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZVBhZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -41,6 +37,10 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Personal/EntmedicalUI/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Personal/EntmedicalUI/Components/DiagnostikaComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xEaWFnbm9zdGlrYUNvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-vatss05upo
 
 [C:/Personal/EntmedicalUI/Components/PatientDetails.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYXRpZW50RGV0YWlscy5yYXpvcg==

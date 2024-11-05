@@ -1,11 +1,11 @@
 <!-- Components/ServiceList.razor -->
 <div class="nav nav-tabs">
     <nav class="service-nav">
-        <a href="#" class="service-link active" @onclick="ShowQabulComponent">Qabul</a>
-        <a href="#" class="service-link" @onclick="HideQabulComponent">Diagnostika</a>
-        <a href="#" class="service-link" @onclick="HideQabulComponent">Laboratoriya</a>
-        <a href="#" class="service-link" @onclick="HideQabulComponent">XXX</a>
-        <a href="#" class="service-link" @onclick="HideQabulComponent">XXX</a>
+        <a  class="service-link active" @onclick="ShowQabulComponent">Qabul</a>
+        <a href="#" class="service-link" @onclick="ShowDiagnostikaComponent">Diagnostika</a>
+        <a href="#" class="service-link" >Laboratoriya</a>
+        <a href="#" class="service-link" >XXX</a>
+        <a href="#" class="service-link" >XXX</a>
         <a href="#" class="service-link disabled" aria-disabled="true">Disabled</a>
     </nav>
 </div>
@@ -15,29 +15,29 @@
 {
     <QabulComponent />
 }
+@if (isDiagnostikaSelected)
+{
+    <DiagnostikaComponent />
+
+}
 
 @code {
     // Variable to track if QabulComponent should be shown
     private bool isQabulSelected = false;
-
+    private bool isDiagnostikaSelected = false;
     // Method to show the Qabul component
     private void ShowQabulComponent()
     {
         isQabulSelected = true;
+        isDiagnostikaSelected = false;
     }
 
     // Method to hide the Qabul component
-    private void HideQabulComponent()
+    private void ShowDiagnostikaComponent()
     {
         isQabulSelected = false;
+        isDiagnostikaSelected = true;
     }
 
 
-    public class Service
-    {
-        public string Name { get; set; }
-        public int Price { get; set; }
-    }
-
-    [Parameter] public List<Service> Services { get; set; } = new List<Service>();
 }
