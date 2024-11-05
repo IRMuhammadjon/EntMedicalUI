@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EntmedicalUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+40e2f6b938a8cb28903ed6d91c5fd13f9fd13763")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+770c928437607726d36653f56e56ff0189ebd526")]
 [assembly: System.Reflection.AssemblyProductAttribute("EntmedicalUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EntmedicalUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
