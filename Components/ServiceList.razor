@@ -1,0 +1,20 @@
+<!-- Components/ServiceList.razor -->
+<div class="service-list">
+</div>
+    <nav>
+    <a href="/">Qabul</a> |
+    <a href="/">Diagnostika</a>|
+     <a href="/">Laboratoriya</a> |
+    <a href="/about">XXX</a>|
+     <a href="/">XXX</a> 
+     </nav>
+
+@code {
+    public class Service
+    {
+        public string Name { get; set; }
+        public int Price { get; set; }
+    }
+
+    [Parameter] public List<Service> Services { get; set; } = new List<Service>();
+}

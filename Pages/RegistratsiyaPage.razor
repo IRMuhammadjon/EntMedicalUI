@@ -1,0 +1,20 @@
+<!-- Pages/HomePage.razor -->
+@page "/Registratsiya"
+@using EntmedicalUI.Components
+
+
+<PatientDetails PatientName="Eshonov Bahodir" PatientAddress="Some Address" PatientBirthdate="22.11.1992" PatientPassportInfo="AD 7654321" DoctorID="DR101" />
+
+<ServiceList Services="@services" />
+
+<DiagnosticForm />
+
+@code {
+    private List<ServiceList.Service> services = new List<ServiceList.Service>
+    {
+        new() { Name = "Consultation", Price = 60000 },
+        new() { Name = "Limfotrop", Price = 70000 },
+        new() { Name = "BYB Sanatsiyasi", Price = 50000 },
+        new() { Name = "Quloq Yuvish", Price = 50000 }
+    };
+}

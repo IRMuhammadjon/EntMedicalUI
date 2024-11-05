@@ -1,0 +1,43 @@
+/* PatientDetails.razor.css */
+
+.form-container[b-qxqcl6eavx] {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+.form-row[b-qxqcl6eavx] {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.form-label[b-qxqcl6eavx] {
+    background-color: #00c2ff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: default;
+    width: 150px;
+    text-align: center;
+}
+
+.form-input[b-qxqcl6eavx] {
+    flex-grow: 1;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #00c2ff;
+    border-radius: 5px;
+    outline: none;
+}
+
+.form-input[b-qxqcl6eavx]::placeholder {
+    color: #bbb;
+}

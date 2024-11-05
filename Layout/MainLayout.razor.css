@@ -1,0 +1,66 @@
+/* MainLayout.razor.css */
+
+.main-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #f8f9fa;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+main {
+    flex-grow: 1;
+    width: 100%;
+    max-width: 800px;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer {
+    background-color: #f1f1f1;
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #666;
+}
+nav a {
+    margin: 0 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+/* MainLayout.razor.css */
+
+.patient-details, .service-list, .diagnostic-form {
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+h3 {
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 0.5rem 0;
+}

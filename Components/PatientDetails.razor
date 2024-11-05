@@ -1,0 +1,33 @@
+<!-- Components/PatientDetails.razor -->
+<div class="form-container">
+    <div class="form-row">
+        <button class="form-label">Bemor F.I.SH.</button>
+        <input type="text" placeholder="Ism sharif" class="form-input" />
+        <button class="form-label">Tug'ilgan yili</button>
+        <input type="text" placeholder="Tug'ilgan yili" class="form-input" />
+    </div>
+    <div class="form-row">
+        <button class="form-label">Yashash manzili</button>
+        <input type="text" placeholder="Yashash manzili" class="form-input" />
+        <button class="form-label">Pasport ma'lumoti</button>
+        <input type="text" placeholder="AD 7654321" class="form-input" />
+    </div>
+    <div class="form-row">
+        <button class="form-label">XXX</button>
+        <input type="text" placeholder="xxx" class="form-input" />
+        <button class="form-label">Shifokor ID si</button>
+        <input type="text" placeholder="Shifokor ID si" class="form-input" />
+    </div>
+    <div class="form-row">
+        <button class="form-label">Bemor F.I.SH.</button>
+        <input type="text" placeholder="Ism sharif" class="form-input" />
+    </div>
+</div>
+
+@code {
+    [Parameter] public string PatientName { get; set; }
+    [Parameter] public string PatientAddress { get; set; }
+    [Parameter] public string PatientBirthdate { get; set; }
+    [Parameter] public string PatientPassportInfo { get; set; }
+    [Parameter] public string DoctorID { get; set; }
+}
