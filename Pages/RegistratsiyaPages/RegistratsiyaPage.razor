@@ -1,0 +1,135 @@
+@page "/Registration"
+
+<h3>Bemorlar ro'yxati</h3>
+
+<div class="d-flex justify-content-between mb-2">
+    <div class="input-group" style="width: 300px;">
+        <input type="text" class="form-control" placeholder="Type a name...">
+        <div class="input-group-append">
+            <button class="btn btn-primary" type="button">🔍</button>
+        </div>
+    </div>
+    <div>
+        
+        <button class="btn btn-info me-2">Export CSV</button>
+        <button class="btn btn-primary" @onclick="NavigateToCreate">Create</button>
+    </div>
+</div>
+
+@if (Patients.Count > 0)
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th><input type="checkbox" /></th>
+                <th @onclick="() => SortBy(nameof(Patient.PatientName))">Ism-Familiya</th>
+                <th @onclick="() => SortBy(nameof(Patient.PatientAddress))">Manzil</th>
+                <th @onclick="() => SortBy(nameof(Patient.PatientBirthdate))">Tug'ilgan Sana</th>
+                <th @onclick="() => SortBy(nameof(Patient.PatientPassportInfo))">Pasport Ma'lumotlari</th>
+                <th @onclick="() => SortBy(nameof(Patient.DoctorID))">Shifokor ID</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var patient in Patients)
+            {
+                <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>@patient.PatientName</td>
+                    <td>@patient.PatientAddress</td>
+                    <td>@patient.PatientBirthdate</td>
+                    <td>@patient.PatientPassportInfo</td>
+                    <td>@patient.DoctorID</td>
+                    <td>
+                        <button class="btn btn-info btn-sm me-1">Edit</button>
+                        <button class="btn btn-danger btn-sm">Delete</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Hozircha bemorlar ro'yxati bo'sh.</p>
+}
+
+<div class="d-flex justify-content-between">
+    <div>
+        <button class="btn btn-secondary">1</button>
+        <button class="btn btn-secondary">2</button>
+    </div>
+    <div class="input-group" style="width: 150px;">
+        <input type="text" class="form-control" placeholder="Type page number...">
+        <button class="btn btn-primary">Go</button>
+    </div>
+</div>
+
+@code {
+    [Inject] private NavigationManager Navigation { get; set; }
+
+    private List<Patient> Patients { get; set; } = new List<Patient>();
+
+    private bool isAscending = true;
+    private string currentSortColumn;
+
+    protected override void OnInitialized()
+    {
+        // Sample patients for demonstration purposes
+        Patients.Add(new Patient 
+        { 
+            PatientName = "Olimov Ali", 
+            PatientAddress = "Toshkent, Shayxontohur", 
+            PatientBirthdate = "1990-04-12", 
+            PatientPassportInfo = "AB1234567", 
+            DoctorID = "D001" 
+        });
+        Patients.Add(new Patient 
+        { 
+            PatientName = "Karimova Nargiza", 
+            PatientAddress = "Toshkent, Chilonzor", 
+            PatientBirthdate = "1988-09-30", 
+            PatientPassportInfo = "BC7654321", 
+            DoctorID = "D002" 
+        });
+        Patients.Add(new Patient 
+        { 
+            PatientName = "Usmonov Zafar", 
+            PatientAddress = "Samarqand, Oqdaryo", 
+            PatientBirthdate = "1975-11-25", 
+            PatientPassportInfo = "CD2345678", 
+            DoctorID = "D003" 
+        });
+    }
+
+    private void SortBy(string columnName)
+    {
+        if (currentSortColumn == columnName)
+        {
+            isAscending = !isAscending;
+        }
+        else
+        {
+            isAscending = true;
+            currentSortColumn = columnName;
+        }
+
+        Patients = isAscending 
+            ? Patients.OrderBy(p => typeof(Patient).GetProperty(columnName).GetValue(p, null)).ToList() 
+            : Patients.OrderByDescending(p => typeof(Patient).GetProperty(columnName).GetValue(p, null)).ToList();
+    }
+
+    private void NavigateToCreate()
+    {
+        Navigation.NavigateTo("/Create");
+    }
+
+    public class Patient
+    {
+        public string PatientName { get; set; }
+        public string PatientAddress { get; set; }
+        public string PatientBirthdate { get; set; }
+        public string PatientPassportInfo { get; set; }
+        public string DoctorID { get; set; }
+    }
+}

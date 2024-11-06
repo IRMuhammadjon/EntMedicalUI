@@ -39,8 +39,14 @@
         }
     </div>
 </div>
+<button @onclick="SavePatient">Saqlash</button>
 
 @code {
+      [Parameter] public string PatientName { get; set; }
+    [Parameter] public string PatientAddress { get; set; }
+    [Parameter] public string PatientBirthdate { get; set; }
+    [Parameter] public string PatientPassportInfo { get; set; }
+    [Parameter] public string DoctorID { get; set; }
     // Service model
     public class ServiceItem
     {
@@ -62,4 +68,37 @@
 
     // Filtered list of selected services
     private IEnumerable<ServiceItem> SelectedServices => Services.Where(s => s.IsSelected);
+         [Parameter] public EventCallback<Patient> OnSave { get; set; }
+
+    [Inject] private NavigationManager Navigation { get; set; }
+    private void SavePatient()
+    {
+        var newPatient = new Patient
+        {
+            PatientName = PatientName,
+            PatientAddress = PatientAddress,
+            PatientBirthdate = PatientBirthdate,
+            PatientPassportInfo = PatientPassportInfo,
+            DoctorID = DoctorID
+        };
+
+        OnSave.InvokeAsync(newPatient);
+
+        // Clear the form fields
+        PatientName = string.Empty;
+        PatientAddress = string.Empty;
+        PatientBirthdate = string.Empty;
+        PatientPassportInfo = string.Empty;
+        DoctorID = string.Empty;
+        Navigation.NavigateTo("/Registration");
+
+    }
+     public class Patient
+    {
+        public string PatientName { get; set; }
+        public string PatientAddress { get; set; }
+        public string PatientBirthdate { get; set; }
+        public string PatientPassportInfo { get; set; }
+        public string DoctorID { get; set; }
+    }
 }

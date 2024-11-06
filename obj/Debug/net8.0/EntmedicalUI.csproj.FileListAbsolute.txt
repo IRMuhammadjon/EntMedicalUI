@@ -1034,3 +1034,4 @@ C:\Personal\EntmedicalUI\obj\Debug\net8.0\scopedcss\Components\ServiceList.razor
 C:\Personal\EntmedicalUI\obj\Debug\net8.0\scopedcss\Components\QabulComponent.razor.rz.scp.css
 C:\Personal\EntmedicalUI\obj\Debug\net8.0\scopedcss\Components\ServiceSelectionComponent.razor.rz.scp.css
 C:\Personal\EntmedicalUI\obj\Debug\net8.0\scopedcss\Components\DiagnostikaComponent.razor.rz.scp.css
+C:\Personal\EntmedicalUI\obj\Debug\net8.0\scopedcss\Pages\RegistratsiyaPages\PatientRegistrationComponent.razor.rz.scp.css

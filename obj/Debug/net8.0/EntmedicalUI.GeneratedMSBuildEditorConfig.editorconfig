@@ -30,8 +30,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZVBhZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Personal/EntmedicalUI/Pages/RegistratsiyaPage.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0cmF0c2l5YVBhZ2UucmF6b3I=
+[C:/Personal/EntmedicalUI/Pages/RegistratsiyaPages/RegistratsiyaPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0cmF0c2l5YVBhZ2VzXFJlZ2lzdHJhdHNpeWFQYWdlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Personal/EntmedicalUI/_Imports.razor]
@@ -61,3 +61,7 @@ build_metadata.AdditionalFiles.CssScope = b-x5zn6i8xen
 [C:/Personal/EntmedicalUI/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-feerhhijlv
+
+[C:/Personal/EntmedicalUI/Pages/RegistratsiyaPages/PatientRegistrationComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0cmF0c2l5YVBhZ2VzXFBhdGllbnRSZWdpc3RyYXRpb25Db21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-6dnn1xbhmb
